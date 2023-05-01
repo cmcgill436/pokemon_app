@@ -1,19 +1,48 @@
 const React = require("react");
 
 const myStyle = {
-  color: "#ffd54b ",
-  backgroundColor: "#7dc9ab",
-  textAlign: "center",
-  textShadow:
-    "-1px -1px 0 #c13e5b, 1px -1px 0 #c13e5b, -1px 1px 0 #c13e5b, 1px 1px 0 #c13e5b",
+  container: {
+    backgroundColor: "#7dc9ab",
+    textTransform: "capitalize",
+    textAlign: "center",
+    padding: "20px 0",
+    border: "2px solid #1b7171",
+  },
+  header: {
+    color: "#ffd54b ",
+    fontSize: "50px",
+    textShadow:
+      "-1px -1px 0 #c13e5b, 1px -1px 0 #c13e5b, -1px 1px 0 #c13e5b, 1px 1px 0 #c13e5b",
+  },
+  ul: {
+    listStyleType: "none",
+    fontSize: "30px",
+  },
+  link: {
+    textDecoration: "none",
+    color: "#f37933",
+    textShadow:
+      "-1px -1px 0 #385ca9, 1px -1px 0 #385ca9, -1px 1px 0 #385ca9, 1px 1px 0 #385ca9",
+  },
 };
 
 class Index extends React.Component {
   render() {
-    const { fruits } = this.props;
+    const { pokemon } = this.props;
     return (
-      <div style={myStyle}>
-        <h1>See All The Pokemon!</h1>
+      <div style={myStyle.container}>
+        <h1 style={myStyle.header}>See All The Pokemon!</h1>
+        <ul style={myStyle.ul}>
+          {pokemon.map((pokemon, i) => {
+            return (
+              <li key={i}>
+                <a style={myStyle.link} href={`/pokemon/${i}`}>
+                  {pokemon.name}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     );
   }
