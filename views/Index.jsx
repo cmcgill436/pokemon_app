@@ -35,7 +35,7 @@ class Index extends React.Component {
         <ul style={myStyle.ul}>
           {pokemon.map((pokemon, x) => {
             return (
-              <li key={i}>
+              <li key={x}>
                 <a style={myStyle.link} href={`/pokemon/${x}`}>
                   {pokemon.name}
                 </a>
