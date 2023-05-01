@@ -6,7 +6,7 @@ const myStyle = {
     textTransform: "capitalize",
     textAlign: "center",
     padding: "20px 0",
-    border: "2px solid #1b7171",
+    border: "10px solid #1b7171",
   },
   header: {
     color: "#ffd54b ",
