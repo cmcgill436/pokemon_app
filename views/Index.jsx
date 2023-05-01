@@ -33,10 +33,10 @@ class Index extends React.Component {
       <div style={myStyle.container}>
         <h1 style={myStyle.header}>See All The Pokemon!</h1>
         <ul style={myStyle.ul}>
-          {pokemon.map((pokemon, i) => {
+          {pokemon.map((pokemon, x) => {
             return (
               <li key={i}>
-                <a style={myStyle.link} href={`/pokemon/${i}`}>
+                <a style={myStyle.link} href={`/pokemon/${x}`}>
                   {pokemon.name}
                 </a>
               </li>
