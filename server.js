@@ -8,12 +8,23 @@ app.engine("jsx", reactViewsEngine);
 app.set("view engine", "jsx");
 app.set("views", "./views");
 
+app.use(express.urlencoded({ extended: false }));
+
 app.get("/", (req, res) => {
   res.send("Welcome to the Pokemon App!");
 });
 
 app.get("/pokemon", (req, res) => {
   res.render("Index", { pokemon });
+});
+
+app.get("/pokemon/new", (req, res) => {
+  res.render("New");
+});
+
+app.post("/pokemon", (req, res) => {
+  pokemon.push({ ...req.body });
+  res.redirect("/pokemon");
 });
 
 app.get("/pokemon/:id", (req, res) => {

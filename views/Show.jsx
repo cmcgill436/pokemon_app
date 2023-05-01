@@ -15,14 +15,15 @@ const myStyle = {
       "-1px -1px 0 #c13e5b, 1px -1px 0 #c13e5b, -1px 1px 0 #c13e5b, 1px 1px 0 #c13e5b",
   },
   h2: {
-    listStyleType: "none",
     fontSize: "30px",
+    color: "#b184a3,",
+    textShadow:
+      "-1px -1px 0 #f37933, 1px -1px 0 #f37933, -1px 1px 0 #f37933, 1px 1px 0 #f37933",
   },
   link: {
-    textDecoration: "none",
-    color: "#f37933",
+    color: "#b184a3,",
     textShadow:
-      "-1px -1px 0 #385ca9, 1px -1px 0 #385ca9, -1px 1px 0 #385ca9, 1px 1px 0 #385ca9",
+      "-1px -1px 0 #f37933, 1px -1px 0 #f37933, -1px 1px 0 #f37933, 1px 1px 0 #f37933",
   },
 };
 
@@ -31,8 +32,8 @@ class Show extends React.Component {
     const pokemon = this.props;
     return (
       <div style={myStyle.container}>
-        <h1 style={myStyle.header}>Gotta Catch 'Em All</h1>
-        <h2 style={myStyle.h2}>{pokemon.name}</h2>
+        <h1>Gotta Catch 'Em All</h1>
+        <h2>{pokemon.name}</h2>
         <img src={`${pokemon.img}.jpg`} />
         <br />
         <a style={myStyle.link} href="/pokemon">
