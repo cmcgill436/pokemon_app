@@ -34,7 +34,7 @@ class Show extends React.Component {
       <div style={myStyle.container}>
         <h1>Gotta Catch 'Em All</h1>
         <h2>{pokemon.name}</h2>
-        <img src={`${pokemon.img}.jpg`} />
+        <img src={`${pokemon.img}.png`} />
         <br />
         <a style={myStyle.link} href="/pokemon">
           Back

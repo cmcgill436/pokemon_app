@@ -38,7 +38,7 @@ class Index extends React.Component {
             console.log(pokemon);
             return (
               <li key={x}>
-                <a style={myStyle.link} href={`/pokemon/${x}`}>
+                <a style={myStyle.link} href={`/pokemon/${pokemon._id}`}>
                   {pokemon.name}
                 </a>
               </li>
