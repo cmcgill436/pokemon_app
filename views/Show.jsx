@@ -29,12 +29,13 @@ const myStyle = {
 
 class Show extends React.Component {
   render() {
-    const pokemon = this.props;
+    const pokemon = this.props.pokemon;
+    console.log(pokemon, "IM HERE");
     return (
       <div style={myStyle.container}>
         <h1>Gotta Catch 'Em All</h1>
         <h2>{pokemon.name}</h2>
-        <img src={`${pokemon.img}.png`} />
+        <img src={`${pokemon.img}.jpg`} />
         <br />
         <a style={myStyle.link} href="/pokemon">
           Back

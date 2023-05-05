@@ -13,14 +13,6 @@ connection.once("open", () => {
   console.log("connected to mongo");
 });
 
-connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-connection.once("open", () => {
-  console.log("connected to mongo");
-});
-
 const reactViewsEngine = require("jsx-view-engine").createEngine();
 app.engine("jsx", reactViewsEngine);
 app.set("view engine", "jsx");
@@ -70,6 +62,7 @@ app.post("/pokemon", async (req, res) => {
 app.get("/pokemon/:id", async (req, res) => {
   try {
     const foundPokemon = await Pokemon.findById(req.params.id);
+    console.log(foundPokemon);
     res.render("Show", {
       pokemon: foundPokemon,
     });

@@ -32,7 +32,7 @@ class Index extends React.Component {
     return (
       <div style={myStyle.container}>
         <a href="/pokemon/new">Add another Pokemon!</a>
-        <h1 style={myStyle.header}>See All The Pokemon!</h1>
+        <h1 style={myStyle.header}>See All of The Pokemon!</h1>
         <ul style={myStyle.ul}>
           {pokemon.map((pokemon, x) => {
             console.log(pokemon);
